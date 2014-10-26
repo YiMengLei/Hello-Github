@@ -38,9 +38,10 @@ void JosephusCircle::Josephus(int n, int m)
         for(int i=0;i<m;i++)
             rear=rear->next;
         outquene=rear->next;
-        cout<<outquene->num<<" ";
         if(n==1)
             cout<<endl<<"The winner is:"<<outquene->num;
+        else
+            cout<<outquene->num<<" ";
         rear->next=outquene->next;
         delete outquene;
     }
